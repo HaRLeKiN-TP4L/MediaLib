@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MediaLib.Data.Models.Movie>
+@{
+    ViewBag.Title = "Filme";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+@if (!Model.Any())
+{
+    <p>Keine Filme vorhanden!</p>
+}
+else
+{
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                Movie
+            </th>
+            <th>
+                Genre
+            </th>
+            <th>
+                ReleaseDate
+            </th>
+            <th>
+                Media
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model)
+        {
+        <tr>
+            <td>
+                @Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)
+            </td>
+            <td>
+                @movie.Genre.Name
+            </td>
+            <td>
+                @movie.ReleaseDate.ToString("dd/MM/yyyy")
+            </td>
+            <td>
+                @movie.Medium.Name
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+    
+}
+
