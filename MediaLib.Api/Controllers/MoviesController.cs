@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using MediaLib.Data.Models;
 using System.Data.Entity;
+using MediaLib.Api.ViewModels;
 
 namespace MediaLib.Api.Controllers
 {
@@ -37,7 +38,21 @@ namespace MediaLib.Api.Controllers
         }
         public ActionResult New()
         {
-            return View();
+            var genres = _context.MovieGenres.ToList();
+            var viewModel = new NewMovieViewModel
+            {
+                MovieGenres = genres
+        };
+
+            return View(viewModel);
+        }
+        [HttpPost]
+        public ActionResult Create(Movie movie)
+        {
+            _context.Movies.Add(movie);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Movies");
         }
     }
 }

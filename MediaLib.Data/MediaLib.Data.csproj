@@ -273,6 +273,10 @@
     <Compile Include="Migrations\202003121318377_Test.designer.cs">
       <DependentUpon>202003121318377_Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003260927260_ChangeMovieModel.cs" />
+    <Compile Include="Migrations\202003260927260_ChangeMovieModel.designer.cs">
+      <DependentUpon>202003260927260_ChangeMovieModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -336,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003121318377_Test.resx">
       <DependentUpon>202003121318377_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003260927260_ChangeMovieModel.resx">
+      <DependentUpon>202003260927260_ChangeMovieModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
