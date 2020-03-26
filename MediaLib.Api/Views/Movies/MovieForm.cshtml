@@ -1,12 +1,11 @@
-﻿@model MediaLib.Api.ViewModels.NewMovieViewModel
+﻿@model MediaLib.Api.ViewModels.MovieFormViewModel
 @{
     ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <h2>New Movie</h2>
 
-@using (Html.BeginForm("Create", "Movies"))
+@using (Html.BeginForm("Save", "Movies"))
 {
     <div class="form-group">
         @Html.LabelFor(m => m.Movie.Name)
@@ -17,13 +16,13 @@
         @Html.DropDownListFor(m => m.MovieGenres, new SelectList(Model.MovieGenres, "Id", "Name"), "Select Genre", new { @class = "form-control" })
     </div>
     @*Hier funzt was nicht weil Media angeblich NULL ist!!!!!!*@
-    <div class="form-group">
+    @*<div class="form-group">
         @Html.LabelFor(m => m.Media)
         @Html.DropDownListFor(m => m.Media, new SelectList(Model.Media, "Id", "Name"), "Select Medium", new { @class = "form-control" })
-    </div>
+    </div>*@
     <div class="form-group">
         @Html.LabelFor(m => m.Movie.ReleaseDate)
-        @Html.TextBoxFor(m => m.Movie.ReleaseDate, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Movie.ReleaseDate, "{0:dd.MM.yyyy}", new { @class = "form-control" })
     </div>
     <button type="submit" class="btn btn-primary">Save</button>
 }

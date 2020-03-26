@@ -39,20 +39,45 @@ namespace MediaLib.Api.Controllers
         public ActionResult New()
         {
             var genres = _context.MovieGenres.ToList();
-            var viewModel = new NewMovieViewModel
+            var viewModel = new MovieFormViewModel
             {
                 MovieGenres = genres
         };
 
-            return View(viewModel);
+            return View("MovieForm", viewModel);
         }
         [HttpPost]
-        public ActionResult Create(Movie movie)
+        public ActionResult Save(Movie movie)
         {
-            _context.Movies.Add(movie);
+            if (movie.Id == 0)
+                _context.Movies.Add(movie);
+            else
+            {
+                var movieInDb = _context.Movies.Single(m => m.Id == movie.Id);
+
+                movieInDb.Name = movie.Name;
+                movieInDb.Medium = movie.Medium;
+                movieInDb.Genre = movie.Genre;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
+            }
+
             _context.SaveChanges();
 
             return RedirectToAction("Index", "Movies");
+        }
+        public ActionResult Edit(int id)
+        {
+            var movie = _context.Movies.SingleOrDefault(m => m.Id == id);
+
+            if (movie == null)
+                return HttpNotFound();
+
+            var viewModel = new MovieFormViewModel
+            {
+                Movie = movie,
+                MovieGenres = _context.MovieGenres.ToList()
+            };
+            return View("MovieForm", viewModel);
         }
     }
 }

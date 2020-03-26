@@ -7,7 +7,7 @@ using System.Web;
 
 namespace MediaLib.Api.ViewModels
 {
-    public class NewMovieViewModel
+    public class MovieFormViewModel
     {
         [Display(Name = "Genre")]
         public IEnumerable<MovieGenre> MovieGenres { get; set; }
