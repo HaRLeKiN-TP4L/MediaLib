@@ -19,8 +19,11 @@ namespace MediaLib.Data.Models
 
         public DateTime DateAdd { get; set; }
 
-        [Required]
         public MovieGenre Genre { get; set; }
+
+        [Required]
+        [Display(Name = "Genre")]
+        public byte GenreId { get; set; }
 
         public List<MovieActor> Actors { get; set; }
 

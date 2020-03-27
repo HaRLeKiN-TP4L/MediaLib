@@ -277,6 +277,18 @@
     <Compile Include="Migrations\202003260927260_ChangeMovieModel.designer.cs">
       <DependentUpon>202003260927260_ChangeMovieModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003271023123_ChangeGenreInMovie.cs" />
+    <Compile Include="Migrations\202003271023123_ChangeGenreInMovie.designer.cs">
+      <DependentUpon>202003271023123_ChangeGenreInMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003271029411_ChangeGenreInMovie1.cs" />
+    <Compile Include="Migrations\202003271029411_ChangeGenreInMovie1.designer.cs">
+      <DependentUpon>202003271029411_ChangeGenreInMovie1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003271033161_ChangeGenreInMovie2.cs" />
+    <Compile Include="Migrations\202003271033161_ChangeGenreInMovie2.designer.cs">
+      <DependentUpon>202003271033161_ChangeGenreInMovie2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -343,6 +355,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003260927260_ChangeMovieModel.resx">
       <DependentUpon>202003260927260_ChangeMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003271023123_ChangeGenreInMovie.resx">
+      <DependentUpon>202003271023123_ChangeGenreInMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003271029411_ChangeGenreInMovie1.resx">
+      <DependentUpon>202003271029411_ChangeGenreInMovie1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003271033161_ChangeGenreInMovie2.resx">
+      <DependentUpon>202003271033161_ChangeGenreInMovie2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
