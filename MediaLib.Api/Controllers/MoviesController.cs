@@ -12,10 +12,12 @@ namespace MediaLib.Api.Controllers
     public class MoviesController : Controller
     {
         private ApplicationDbContext _context;
+
         public MoviesController()
         {
             _context = new ApplicationDbContext();
         }
+
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();
@@ -27,6 +29,7 @@ namespace MediaLib.Api.Controllers
 
             return View(movies);
         }
+
         public ActionResult Details(int id)
         {
             var movie = _context.Movies.Include(m => m.Genre).Include(m => m.Medium).SingleOrDefault(m => m.Id == id);
@@ -36,6 +39,7 @@ namespace MediaLib.Api.Controllers
 
             return View(movie);
         }
+
         public ActionResult New()
         {
             var genres = _context.MovieGenres.ToList();
@@ -46,6 +50,7 @@ namespace MediaLib.Api.Controllers
 
             return View("MovieForm", viewModel);
         }
+
         [HttpPost]
         public ActionResult Save(Movie movie)
         {
@@ -65,6 +70,7 @@ namespace MediaLib.Api.Controllers
 
             return RedirectToAction("Index", "Movies");
         }
+
         public ActionResult Edit(int id)
         {
             var movie = _context.Movies.SingleOrDefault(m => m.Id == id);

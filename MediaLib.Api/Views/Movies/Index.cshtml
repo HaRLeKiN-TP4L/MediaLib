@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<MediaLib.Data.Models.Movie>
 @{
-    ViewBag.Title = "Filme";
+    ViewBag.Title = "Movie";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -11,6 +11,10 @@
 }
 else
 {
+
+@Html.ActionLink("New Movie", "New", "Movies", new { @class = "btn btn-dark" })
+<p><br /></p>
+
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
@@ -21,7 +25,7 @@ else
                 Genre
             </th>
             <th>
-                ReleaseDate
+                Release date
             </th>
             <th>
                 Media

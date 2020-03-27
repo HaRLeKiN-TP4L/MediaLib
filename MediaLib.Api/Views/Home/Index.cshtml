@@ -6,12 +6,12 @@
     <div class="col-md-4">
         <h2>Filme</h2>
         <p>Sieh dir alle verfügbaren Filme an!</p>
-        <p class="btn btn-dark" @Html.ActionLink("Gehe zu", "Index", "Movies")> </p>
+        @Html.ActionLink("Gehe zu", "Index", "Movies", new { @class = "btn btn-dark" })
     </div>
     <div class="col-md-4">
         <h2>Musik</h2>
         <p>Sieh dir die gesamte Musiksammlung an!</p>
-        <p class="btn btn-dark" @Html.ActionLink("Gehe zu", "Index", "Music")></p>
+        @Html.ActionLink("Gehe zu", "Index", "Music", new { @class = "btn btn-dark" })
     </div>
     <div class="col-md-4">
         <h2>Anmeldung</h2>
