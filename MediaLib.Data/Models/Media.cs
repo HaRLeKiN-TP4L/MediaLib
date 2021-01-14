@@ -5,7 +5,7 @@ using System.Web;
 
 namespace MediaLib.Data.Models
 {
-    public class Medium
+    public class Media
     {
         public int Id { get; set; }
         public string Name { get; set; }

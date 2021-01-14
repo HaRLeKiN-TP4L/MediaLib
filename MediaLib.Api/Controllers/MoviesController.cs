@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using MediaLib.Data.Models;
 using System.Data.Entity;
 using MediaLib.Api.ViewModels;
+using System.Data.Entity.Validation;
 
 namespace MediaLib.Api.Controllers
 {
@@ -43,10 +44,13 @@ namespace MediaLib.Api.Controllers
         public ActionResult New()
         {
             var genres = _context.MovieGenres.ToList();
+            var media = _context.Media.ToList();
             var viewModel = new MovieFormViewModel
             {
-                MovieGenres = genres
-        };
+                Movie = new Movie(),
+                MovieGenres = genres,
+                Media =  media
+            };
 
             return View("MovieForm", viewModel);
         }
@@ -54,6 +58,17 @@ namespace MediaLib.Api.Controllers
         [HttpPost]
         public ActionResult Save(Movie movie)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MovieFormViewModel
+                {
+                    Movie = movie,
+                    MovieGenres = _context.MovieGenres.ToList(),
+                    Media = _context.Media.ToList()
+                };
+
+                return View("MovieForm", viewModel);
+            }
             if (movie.Id == 0)
                 _context.Movies.Add(movie);
             else
@@ -66,7 +81,9 @@ namespace MediaLib.Api.Controllers
                 movieInDb.ReleaseDate = movie.ReleaseDate;
             }
 
-            _context.SaveChanges();
+          
+           _context.SaveChanges();
+           
 
             return RedirectToAction("Index", "Movies");
         }

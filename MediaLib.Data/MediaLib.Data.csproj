@@ -289,11 +289,31 @@
     <Compile Include="Migrations\202003271033161_ChangeGenreInMovie2.designer.cs">
       <DependentUpon>202003271033161_ChangeGenreInMovie2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101141152338_changeReleaseDate.cs" />
+    <Compile Include="Migrations\202101141152338_changeReleaseDate.designer.cs">
+      <DependentUpon>202101141152338_changeReleaseDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101141221066_changeNameStringLength.cs" />
+    <Compile Include="Migrations\202101141221066_changeNameStringLength.designer.cs">
+      <DependentUpon>202101141221066_changeNameStringLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101141241334_changeMedia.cs" />
+    <Compile Include="Migrations\202101141241334_changeMedia.designer.cs">
+      <DependentUpon>202101141241334_changeMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101141308269_changeMedia1.cs" />
+    <Compile Include="Migrations\202101141308269_changeMedia1.designer.cs">
+      <DependentUpon>202101141308269_changeMedia1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101141329559_changeMovieDeleteGenreId.cs" />
+    <Compile Include="Migrations\202101141329559_changeMovieDeleteGenreId.designer.cs">
+      <DependentUpon>202101141329559_changeMovieDeleteGenreId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Medium.cs" />
+    <Compile Include="Models\Media.cs" />
     <Compile Include="Models\Movie\Movie.cs" />
     <Compile Include="Models\Movie\MovieActor.cs" />
     <Compile Include="Models\Movie\MovieGenre.cs" />
@@ -364,6 +384,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003271033161_ChangeGenreInMovie2.resx">
       <DependentUpon>202003271033161_ChangeGenreInMovie2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101141152338_changeReleaseDate.resx">
+      <DependentUpon>202101141152338_changeReleaseDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101141221066_changeNameStringLength.resx">
+      <DependentUpon>202101141221066_changeNameStringLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101141241334_changeMedia.resx">
+      <DependentUpon>202101141241334_changeMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101141308269_changeMedia1.resx">
+      <DependentUpon>202101141308269_changeMedia1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101141329559_changeMovieDeleteGenreId.resx">
+      <DependentUpon>202101141329559_changeMovieDeleteGenreId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

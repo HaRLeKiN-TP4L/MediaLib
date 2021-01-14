@@ -43,7 +43,7 @@ else
                 @movie.Genre.Name
             </td>
             <td>
-                @movie.ReleaseDate.ToString("dd/MM/yyyy")
+                @movie.ReleaseDate.Value.ToShortDateString()
             </td>
             <td>
                 @movie.Medium.Name

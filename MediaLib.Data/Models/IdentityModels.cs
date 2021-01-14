@@ -29,6 +29,7 @@ namespace MediaLib.Data.Models
         public DbSet<MusicGenre> MusicGenres { get; set; }
         public DbSet<MusicAlbum> MusicAlbums { get; set; }
         public DbSet<MusicArtist> MusicArtists { get; set; }
+        public DbSet<Media> Media { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

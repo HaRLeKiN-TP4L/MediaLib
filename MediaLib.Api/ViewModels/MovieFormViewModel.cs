@@ -11,7 +11,8 @@ namespace MediaLib.Api.ViewModels
     {
         [Display(Name = "Genre")]
         public IEnumerable<MovieGenre> MovieGenres { get; set; }
-        public IEnumerable<Medium> Media { get; set; }
+        [Display(Name = "Medium")]
+        public IEnumerable<Media> Media { get; set; }
         public Movie Movie { get; set; }
     }
 }
