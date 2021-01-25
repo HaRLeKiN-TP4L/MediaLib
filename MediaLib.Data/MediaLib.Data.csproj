@@ -309,6 +309,38 @@
     <Compile Include="Migrations\202101141329559_changeMovieDeleteGenreId.designer.cs">
       <DependentUpon>202101141329559_changeMovieDeleteGenreId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101251329141_resetDB.cs" />
+    <Compile Include="Migrations\202101251329141_resetDB.designer.cs">
+      <DependentUpon>202101251329141_resetDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101251340095_AddMovie.cs" />
+    <Compile Include="Migrations\202101251340095_AddMovie.designer.cs">
+      <DependentUpon>202101251340095_AddMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101251345175_ChangeMovie.cs" />
+    <Compile Include="Migrations\202101251345175_ChangeMovie.designer.cs">
+      <DependentUpon>202101251345175_ChangeMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101251346106_RepairMovie.cs" />
+    <Compile Include="Migrations\202101251346106_RepairMovie.designer.cs">
+      <DependentUpon>202101251346106_RepairMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101251349350_RepairMovie1.cs" />
+    <Compile Include="Migrations\202101251349350_RepairMovie1.designer.cs">
+      <DependentUpon>202101251349350_RepairMovie1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101251355360_RepairMovie2.cs" />
+    <Compile Include="Migrations\202101251355360_RepairMovie2.designer.cs">
+      <DependentUpon>202101251355360_RepairMovie2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101251357120_RepairMovie3.cs" />
+    <Compile Include="Migrations\202101251357120_RepairMovie3.designer.cs">
+      <DependentUpon>202101251357120_RepairMovie3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101251407370_RepairMovie4.cs" />
+    <Compile Include="Migrations\202101251407370_RepairMovie4.designer.cs">
+      <DependentUpon>202101251407370_RepairMovie4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -399,6 +431,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101141329559_changeMovieDeleteGenreId.resx">
       <DependentUpon>202101141329559_changeMovieDeleteGenreId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101251329141_resetDB.resx">
+      <DependentUpon>202101251329141_resetDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101251340095_AddMovie.resx">
+      <DependentUpon>202101251340095_AddMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101251345175_ChangeMovie.resx">
+      <DependentUpon>202101251345175_ChangeMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101251346106_RepairMovie.resx">
+      <DependentUpon>202101251346106_RepairMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101251349350_RepairMovie1.resx">
+      <DependentUpon>202101251349350_RepairMovie1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101251355360_RepairMovie2.resx">
+      <DependentUpon>202101251355360_RepairMovie2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101251357120_RepairMovie3.resx">
+      <DependentUpon>202101251357120_RepairMovie3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101251407370_RepairMovie4.resx">
+      <DependentUpon>202101251407370_RepairMovie4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -15,18 +15,21 @@ namespace MediaLib.Data.Models
         [StringLength(255)]
         public string Name { get; set; }
 
-        [Display(Name = "Release date")]
-        public DateTime? ReleaseDate { get; set; }
+        //[Display(Name = "Release date")]
+        //public DateTime? ReleaseDate { get; set; }
 
-        public DateTime DateAdd { get; set; }
+        //public DateTime DateAdd { get; set; }
+        public MovieGenre Genre { get; set; }
 
         [Required(ErrorMessage = "Bitte gib ein Genre an.")]
         [Display(Name = "Genre")]
-        public MovieGenre Genre { get; set; }
+        public int GenreId { get; set; }
 
         public List<MovieActor> Actors { get; set; }
 
-        [Required(ErrorMessage = "Bitte gib ein Medium an.")]
         public Media Medium { get; set; }
+
+        [Required(ErrorMessage = "Bitte gib ein Medium an.")]
+        public int MediumId { get; set; }
     }
 }

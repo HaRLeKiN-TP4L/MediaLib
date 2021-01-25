@@ -45,9 +45,8 @@ namespace MediaLib.Api.Controllers
         {
             var genres = _context.MovieGenres.ToList();
             var media = _context.Media.ToList();
-            var viewModel = new MovieFormViewModel
+            var viewModel = new MovieFormViewModel()
             {
-                Movie = new Movie(),
                 MovieGenres = genres,
                 Media =  media
             };
@@ -56,13 +55,13 @@ namespace MediaLib.Api.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
             if (!ModelState.IsValid)
             {
-                var viewModel = new MovieFormViewModel
+                var viewModel = new MovieFormViewModel(movie)
                 {
-                    Movie = movie,
                     MovieGenres = _context.MovieGenres.ToList(),
                     Media = _context.Media.ToList()
                 };
@@ -78,7 +77,7 @@ namespace MediaLib.Api.Controllers
                 movieInDb.Name = movie.Name;
                 movieInDb.Medium = movie.Medium;
                 movieInDb.Genre = movie.Genre;
-                movieInDb.ReleaseDate = movie.ReleaseDate;
+                //movieInDb.ReleaseDate = movie.ReleaseDate;
             }
 
           
@@ -95,10 +94,10 @@ namespace MediaLib.Api.Controllers
             if (movie == null)
                 return HttpNotFound();
 
-            var viewModel = new MovieFormViewModel
+            var viewModel = new MovieFormViewModel(movie)
             {
-                Movie = movie,
-                MovieGenres = _context.MovieGenres.ToList()
+                MovieGenres = _context.MovieGenres.ToList(),
+                Media = _context.Media.ToList()
             };
             return View("MovieForm", viewModel);
         }

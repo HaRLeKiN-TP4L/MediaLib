@@ -8,6 +8,7 @@
 @if (!Model.Any())
 {
     <p>Keine Filme vorhanden!</p>
+    @Html.ActionLink("New Movie", "New", "Movies", new { @class = "btn btn-dark" })
 }
 else
 {
@@ -24,9 +25,9 @@ else
             <th>
                 Genre
             </th>
-            <th>
+            @*<th>
                 Release date
-            </th>
+            </th>*@
             <th>
                 Media
             </th>
@@ -42,9 +43,9 @@ else
             <td>
                 @movie.Genre.Name
             </td>
-            <td>
+            @*<td>
                 @movie.ReleaseDate.Value.ToShortDateString()
-            </td>
+            </td>*@
             <td>
                 @movie.Medium.Name
             </td>
